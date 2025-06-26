@@ -1,0 +1,108 @@
+/* General layout + body */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+div {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto 15px auto;
+}
+
+/* Forms + inputs + buttons */
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    margin: 5px 0;
+    width: 150px;
+    height: 20px;
+}
+
+input.quantity-input {
+    width: 120px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px 2px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+th span {
+  font-size: 0.8em;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+tr {
+  transition: background-color 0.2s;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Utility */
+.low-stock {
+  color: #e74c3c;
+  font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LECOM Inventory Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Inventory Manager</h1>
+
+  <div>
+    <h2>Add Product</h2>
+    <div class="input-fields">
+      <input id="prod-id" type="text" placeholder="Product ID">
+      <input id="prod-name" type="text" placeholder="Product Name">
+      <input id="prod-qty" type="number" placeholder="Quantity">
+      <button onclick="addProduct()">Add</button>
+    </div>
+  </div>
+
+  <div>
+    <h2>Search / Filter</h2>
+    <div class="input-fields">
+      <input id="search-name" type="text" placeholder="Search Name" oninput="renderProducts()">
+      <input id="filter-min" type="number" placeholder="Min Quantity" oninput="renderProducts()">
+      <input id="filter-max" type="number" placeholder="Max Quantity" oninput="renderProducts()">
+      <button onclick="clearFilters()">Clear Filters</button>
+    </div>
+  </div>
+  
+
+  <h2>Product List</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th onclick="setSort('id')">ID<span id="arrow-id"></span></th>
+        <th onclick="setSort('name')">Name<span id="arrow-name"></span></th>
+        <th onclick="setSort('quantity')">Quantity<span id="arrow-quantity"></span></th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="product-table"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
